@@ -12,7 +12,7 @@
 **IN ORDER TO USE THIS SOFTWARE, YOU MUST READ, UNDERSTAND AND AGREE TO THE THE GNU AGPL V3 LICENSE INCLUDED IN THIS REPOSITORY.**
 
 <p align="center">
-  <strong>The self-improving sandboxed AI agent that adapts to failure, with persistent memory and scheduling. </strong>
+  <strong>The self-improving sandboxed AI agent that gets smarter from failure, with persistent memory and scheduling. </strong>
 </p>
 
 <p align="center">
