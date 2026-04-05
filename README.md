@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/badge/Status-Alpha-orange?style=for-the-badge" alt="Status">
 </p>
 
-<h1 align="center">🐺 Grimmbot </h1>
+<h1 align="center">🐺 GrimmBot </h1>
 
 ⚠️**LICENSE NOTICE**⚠️
 
