@@ -53,7 +53,7 @@ GrimmBot doesn't just call APIs. It controls a real Chromium browser, moves the 
 <td width="50%">
 
 ### 🧠 It Learns. Permanently.
-When GrimmBot hits an error, it doesn't just retry. It activates an **Error Analysis Engine** that makes it reflect on what went wrong and writes a permanent rule into its own brain (`adaptation.json`). Next time? It doesn't make the same mistake. 
+When GrimmBot hits an error, it doesn't just retry. It activates an **Error Analysis Engine** that makes it reflect on what went wrong and writes a permanent rule into a special file (`adaptation.json`). Next time? It doesn't make the same mistake. 
 
 </td>
 </tr>
