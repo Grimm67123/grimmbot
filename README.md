@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/License-AGPL--3.0-blue?style=for-the-badge" alt="License">
   <img src="https://img.shields.io/badge/Python-3.14+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-4eb8a9?style=for-the-badge" alt="Platform">
+  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20MacOS-4eb8a9?style=for-the-badge" alt="Platform">
   <img src="https://img.shields.io/badge/Status-Alpha-orange?style=for-the-badge" alt="Status">
 </p>
 
@@ -12,7 +12,7 @@
 **IN ORDER TO USE THIS SOFTWARE, YOU MUST READ, UNDERSTAND AND AGREE TO THE THE GNU AGPL V3 LICENSE INCLUDED IN THIS REPOSITORY.**
 
 <p align="center">
-  <strong>The AI agent that writes its own tools, learns from its failures, and actually controls a computer. With persistent memory and scheduling. </strong>
+  <strong>The self-improving sandboxed AI agent that adapts to failure, with persistent memory and scheduling. </strong>
 </p>
 
 <p align="center">
@@ -53,24 +53,21 @@ GrimmBot doesn't just call APIs. It controls a real Chromium browser, moves the 
 <td width="50%">
 
 ### 🧠 It Learns. Permanently.
-When GrimmBot hits an error, it doesn't just retry. It activates an **Error Analysis Engine** that reflects on what went wrong and writes a permanent rule into its own brain (`adaptation.json`). Next time? It doesn't make the same mistake. 
+When GrimmBot hits an error, it doesn't just retry. It activates an **Error Analysis Engine** that makes it reflect on what went wrong and writes a permanent rule into its own brain (`adaptation.json`). Next time? It doesn't make the same mistake. 
 
 </td>
 </tr>
 <tr>
 <td>
 
-### 🛠️ It Builds Its Own Tools And Improves its System Prompt
+### 🛠️ It Builds New Tools For Itself When Necessary
 Need GrimmBot to do something it wasn't built for? It will write a brand new Python tool *on the fly*, register it, and use it immediately. You don't need to code anything. Tell it what you need and it creates the capability itself.
-
-If you need the agent to do certain specialized tasks, it can even improve its own system prompt to suit your needs. Of course, this needs approval on your part.
 
 </td>
 <td>
 
-### 🛡️ Smart Security (`commssafeguard`)
-Runs with domain allowlists, command allowlists, and a smart communication filter. The `commssafeguard` automatically detects "Send", "Post", or "Submit" buttons and pauses for your approval. Your host machine is protected by layers of approval-based tool execution.
-
+### 🛡️ Security 
+It has quite a few security features, such as the fact that it runs in a Docker container, has human approval prompts for certain actions, along with command and domain whitelists (in the .env file).
 </td>
 </tr>
 </table>
@@ -79,34 +76,28 @@ Runs with domain allowlists, command allowlists, and a smart communication filte
 
 ## 🎬 Demos
 
-### Custom Tool Creation
-> *GrimmBot is asked to perform a task it has no built-in tool for. Watch it write, register, and immediately use a brand new Python tool — all autonomously.*
+### UI
+> *Grimmbot's UI when you go to localhost:5000*
 
-<!-- PLACEHOLDER: Record a screen capture of GrimmBot receiving a task, creating a custom tool via create_custom_tool(), and then using it to complete the task. Show the chat panel on the left and the live VNC desktop on the right. -->
-
-https://github.com/user-attachments/assets/PLACEHOLDER-custom-tool-demo.mp4
+LINK
 
 ---
 
 ### Adaptation in Action
-> *GrimmBot encounters an error, reflects on it, writes a permanent rule to adaptation.json, and then succeeds on the retry using the new rule.*
+> *Grimmbot encounters an error, reflects on it, writes a permanent rule to adaptation.json, and then succeeds on the retry using the new rule.*
 
-<!-- PLACEHOLDER: Record a screen capture showing GrimmBot failing a task, the Error Analysis Engine activating, a rule being written to adaptation.json, and then the agent succeeding on the next attempt. -->
-
-https://github.com/user-attachments/assets/PLACEHOLDER-adaptation-demo.mp4
+LINK
 
 ---
 
-### Live Desktop Control
-> *Watch GrimmBot open a browser, navigate to a website, interact with page elements, and report back — all in real-time through the web dashboard.*
+### Custom Tool Creation
+> *See Grimmbot prompt the user for permission to create a custom tool that extracts a .zip file*
 
-<!-- PLACEHOLDER: Record a screen capture of the full web interface. Show the user typing a prompt like "Go to Wikipedia and find the population of Tokyo", then watch the VNC panel as GrimmBot opens Chromium, navigates, reads the DOM, and returns the answer in chat. -->
-
-https://github.com/user-attachments/assets/PLACEHOLDER-desktop-control-demo.mp4
+LINK
 
 ---
 
-## ⚡ Quickstart (Under 2 Minutes)
+## ⚡ How to run it:
 
 **Prerequisites:** [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running.
 
@@ -129,10 +120,10 @@ ALLOWED_COMMANDS=*
 docker-compose up --build 
 ```
 
-**4. Open your browser:**
+**4. Open your browser in order to talk with it:**
 > **http://localhost:5000**
 
-Accept the license & security disclaimer, and you're in. That's it. No Python environment setup, no dependency hell, no configuration nightmares. To turn it on after building, do docker compose up. To turn it off, do docker compose down.
+Docker automatically creates a data folder and a wormhole folder in the folder where the docker-compose.yml file is kept. These folders are mapped to the corresponding folders in the Docker container. You can send and receive files to and from the agent through the wormhole folder. Whenver the agent adapts to an error or failure of some sort, it creates an adaptation.json file which gets mapped to the data folder on the host and saves a rule on how to avoid that error/failure in the future to that file. When it creates a custom tool, it creates a custom_tool.json file which gets mapped to the data folder on the host and the custom tools get saved there. Same goes for memory whenever it remembers something. BE CAUTIOUS WITH THE FILES IN THE WORMHOLE AND DATA FOLDER!
 
 ---
 
@@ -184,8 +175,8 @@ GrimmBot ships with **50+ built-in tools** across these categories:
 | 💻 **Shell** | Execute commands, install packages, compile code, run scripts |
 | 🧠 **Memory** | Persistent, human-readable `memory.json` store that survives restarts |
 | 📅 **Scheduling** | One-time, daily, and interval-based autonomous task execution |
-| 🛠️ **Self-Modification** | Create, list, and delete custom tools at runtime |
-
+| 🛠️ **Self-Improvement** | Create and save custom tools at runtime |
+| 🧬 **Adaptation** | When encountered with an error or failure, it reflects on it and saves a rule on how to avoid it to adaptation.json |
 
 ---
 
@@ -196,6 +187,7 @@ GrimmBot ships with **50+ built-in tools** across these categories:
 <br>
 GrimmBot uses <a href="https://github.com/BerriAI/litellm">LiteLLM</a> under the hood, which means it supports <strong>every major provider</strong>: OpenAI, Anthropic, Google Gemini, Mistral, Groq, Ollama (local models), and more. Just set the <code>LLM_MODEL</code> and <code>LITELLM_API_KEY</code> in your <code>.env</code> file.
 </details>
+<details>
 <summary><strong>Can it run local/offline models?</strong></summary>
 <br>
 Yes. Point <code>LLM_MODEL</code> at an Ollama endpoint or any OpenAI-compatible local server. Vision features require a model that supports image inputs.
