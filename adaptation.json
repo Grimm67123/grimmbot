@@ -1,0 +1,3 @@
+[
+  "Do not use 'ping' to check network latency, it is blocked. Instead, use 'curl -I -s -o /dev/null -w %{time_total}\\n <URL>' as an alternative."
+]
