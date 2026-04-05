@@ -108,8 +108,8 @@ cd GrimmBot
 
 **2. Create your `.env` file:**
 ```ini
-LITELLM_API_KEY=sk-your-api-key-here
-LLM_MODEL=gemini/gemini-2.5-flash
+LITELLM_API_KEY=your-api-key-here
+LLM_MODEL=provider/example-model-name
 ALLOWED_DOMAINS=*
 ALLOWED_COMMANDS=*
 ```
