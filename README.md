@@ -74,23 +74,23 @@ It has quite a few security features, such as the fact that it runs in a Docker 
 
 ---
 
-## 🎬 Demos
+## 🖼️ Gallery
 
-> *Grimmbot's UI when you go to localhost:5000*
+> *GrimmBot's UI when you go to localhost:5000*
 
 <img width="1363" height="637" alt="UI" src="https://github.com/user-attachments/assets/668d2343-f1f6-4f1b-91a8-588de3ac446d" />
 
 ---
 
 ### Adaptation in Action
-> *Grimmbot encounters an error, reflects on it, writes a permanent rule to adaptation.json, and then succeeds on the retry using the new rule.*
+> *GrimmBot encounters an error, reflects on it, writes a permanent rule to adaptation.json, and then succeeds on the retry using the new rule.*
 
 <img width="1356" height="634" alt="Adaptation In Action" src="https://github.com/user-attachments/assets/0e0bd5cf-76d4-45d4-931e-d36286ea2b28" />
 
 ---
 
 ### Custom Tool Creation
-> *See Grimmbot prompt the user for permission to create a custom tool that extracts a .zip file*
+> *See GrimmBot prompt the user for permission to create a custom tool that extracts a .zip file*
 
 <img width="1350" height="615" alt="Custom Tool Creation Approval Prompt" src="https://github.com/user-attachments/assets/5e02406e-76a7-4c93-9a04-1d2cb93bfbb6" />
 
