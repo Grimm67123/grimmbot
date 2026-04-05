@@ -92,7 +92,7 @@ It has quite a few security features, such as the fact that it runs in a Docker 
 ### Custom Tool Creation
 > *See GrimmBot prompt the user for permission to create a custom tool that extracts a .zip file*
 
-<img width="1350" height="615" alt="Custom Tool Creation Approval Prompt" src="https://github.com/user-attachments/assets/5e02406e-76a7-4c93-9a04-1d2cb93bfbb6" />
+<img width="1350" height="615" alt="Custom Tool Creation Approval Prompt" src="https://github.com/user-attachments/assets/978797a1-ce22-40f2-bc06-1f7dfc4ec3a2" />
 
 ---
 
