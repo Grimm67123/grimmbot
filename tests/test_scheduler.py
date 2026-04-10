@@ -8,7 +8,7 @@ from pathlib import Path
 from datetime import datetime, timedelta, timezone
 from unittest.mock import MagicMock
 
-from memory import (
+from scheduler import (
     SchedulerConfig, ScheduleType, ScheduledTask,
     PersistentScheduler, get_scheduler,
 )
