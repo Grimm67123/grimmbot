@@ -82,6 +82,17 @@ Open `http://localhost:5000` in your browser in order to use the agent.
 
 ---
 
+## Gallery
+
+>GrimmBot's webUI at localhost:5000
+<img width="1363" height="637" alt="Image" src="https://github.com/user-attachments/assets/8a8ea1b5-5168-450f-aea1-217f775fe99a" />
+
+>GrimmBot learns from an error and writes a rule so that it avoids it in the future.
+<img width="1356" height="634" alt="Image" src="https://github.com/user-attachments/assets/2d934971-a5b0-4dee-aa14-c6614adebae0" />
+
+>Custom tool creation approval prompt
+<img width="1363" height="643" alt="Image" src="https://github.com/user-attachments/assets/09bf2ab8-8927-4d37-a0c7-a352eb64393f" />
+
 ## Commands
 
 Type these in the chat (no LLM call required):
