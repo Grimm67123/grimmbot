@@ -66,7 +66,7 @@ PROVIDER_API_KEY=your-api-key-here
 Set your security allowlists:
 
 ```env
-ALLOWED_DOMAINS=github.com,stackoverflow.com,wikipedia.org
+ALLOWED_DOMAINS=github.com,wikipedia.org
 ALLOWED_COMMANDS=ls,cat,echo,grep,find,python3,pip,node,npm,git,curl,wget
 ```
 
@@ -78,7 +78,7 @@ docker compose up --build
 
 ### 3. Use
 
-Open `http://localhost:5000` in your browser. Accept the license notice. Chat on the left, live desktop on the right.
+Open `http://localhost:5000` in your browser in order to use the agent.
 
 ---
 
@@ -119,7 +119,7 @@ All learning is stored in the `data/` folder and is portable between machines:
 
 **Which LLMs work?** Any model supported by [LiteLLM](https://github.com/BerriAI/litellm) — Gemini, GPT, Claude, Ollama, LM Studio, Groq, Mistral, and others.
 
-**Can I use fully local/offline models?** Yes. Set `LLM_MODEL=ollama/your-model` and GrimmBot connects to your host's Ollama via `host.docker.internal`. No internet needed for the agent itself.
+**Can I use fully local/offline models?** Yes. For example, for Ollama, set `LLM_MODEL=ollama/your-model` and GrimmBot connects to your host's Ollama via `host.docker.internal`. No internet needed for the agent itself.
 
 **How does the wormhole work?** The `wormhole/` folder is shared between your host and the container. Place files there for the agent to access, or retrieve files the agent creates.
 
